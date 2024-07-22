@@ -151,7 +151,8 @@ iface = gr.Interface(fn=display_images,
                      inputs=[gr.Textbox(label="Username"), gr.Dropdown(label="Gender", choices=dropdown_gender), gr.Dropdown(label="Select Option", choices=dropdown_options)],
                      outputs=["image", "image", "image", "image"],
                      title="Create Your Own Images")
-iface.launch()
+# iface.launch()
+iface.launch(server_name="0.0.0.0", server_port=7861)
 
 # import gradio as gr
 
